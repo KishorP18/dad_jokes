@@ -12,7 +12,7 @@ class JokeRepository implements JokeRepositoryDomain{
     return remoteDataSource.fetchRandomJoke();
   }
 
-  Future<List<Joke>> searchJokes(String searchTerm) {
-    return remoteDataSource.searchJokes(searchTerm);
+  Future<List<Joke>> searchJokes(String searchTerm,{int page=1,int limit=20}) {
+    return remoteDataSource.searchJokes(searchTerm,page:page,limit:limit);
   }
 }

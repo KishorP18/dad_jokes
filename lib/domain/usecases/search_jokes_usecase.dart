@@ -7,7 +7,7 @@ class SearchJokesUseCase {
 
   SearchJokesUseCase(this.repository);
 
-  Future<List<Joke>> execute(String searchTerm) {
-    return repository.searchJokes(searchTerm);
+  Future<List<Joke>> execute(String searchTerm,{int page=1,int limit=20}) {
+    return repository.searchJokes(searchTerm,page: page,limit: limit);
   }
 }

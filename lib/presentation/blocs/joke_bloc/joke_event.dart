@@ -15,6 +15,14 @@ class JokeSearchRequested extends JokeEvent {
 
   const JokeSearchRequested(this.searchTerm);
 
+
   @override
   List<Object?> get props =>[searchTerm];
+}
+
+
+
+class Reset extends JokeEvent {
+  @override
+  List<Object?> get props =>[];
 }
